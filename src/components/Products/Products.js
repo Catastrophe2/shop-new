@@ -9,9 +9,10 @@ const Products = ({products, category, range}) => {
     } else {
         filtered = rangeFiltered.filter((item)=>{if(item.category === category)return item})
     }
-    if (rangeFiltered.length === 0){return <div>Sorry, nothing to show</div>} else{
+    if (rangeFiltered.length === 0){return <div>Sorry, nothing to show</div>} 
+    else{
         return filtered.map(({ id, image, title, price }) => (
-            <Product key={id} img={image} title={title} price={price} />
+            <Product key={id} img={image} title={title} price={price} idi = {id} />
         ));
     }
 
